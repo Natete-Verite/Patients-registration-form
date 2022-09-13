@@ -10,7 +10,7 @@ def register_patient(request):
             form.save()
     else:
         form = PatientRegistrationForm()
-    return render(request,"recordspatients/register_patient.html",{'form':form}) 
+    return render(request, "register_patient.html", {'form': form})
 
 def list_patients(request):
     patients = Patient.objects.all()   
