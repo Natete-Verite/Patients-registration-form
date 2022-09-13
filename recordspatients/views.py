@@ -14,4 +14,4 @@ def register_patient(request):
 
 def list_patients(request):
     patients = Patient.objects.all()   
-    return render(request, "recordspatients/list_patient.html", {"patients":patients})        
+    return render(request, 'list_patients.html', {'patients':patients})        

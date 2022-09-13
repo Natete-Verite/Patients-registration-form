@@ -1,14 +1,28 @@
-<table>
-    <th>
-        <td> First Name </td>
-        <td> Last Name </td>
-        <td> Age </td>
-    <th>
-        {% for patient in patients%}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Patients List</title>
+  </head>
+  <body>
+    <table>
+      <th></th>
+      <td>First Name</td>
+      <td>Last Name</td>
+      <td>Age</td>
+      <td>City</td>
+      <th>
+        {% for patient in patients %}
         <tr>
-            <td> {{ patient.first_name }} </td>
-            <td> {{ patient.last_name }} </td>
-            <td> {{ patient.age }} </td>
+          <td>{{ patient.first_name }}</td>
+          <td>{{ patient.last_name }}</td>
+          <td>{{ patient.age }}</td>
+          <td>{{ patient.City }}</td>
         </tr>
-        {% endfor %}    
-</table>    
+        {% endfor %}
+      </th>
+    </table>
+  </body>
+</html>
