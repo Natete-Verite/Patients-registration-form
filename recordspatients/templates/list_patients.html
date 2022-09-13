@@ -12,9 +12,17 @@
      
         {% for patient in patients %}
         
-          <p>{{ patient.first_name }} {{ patient.last_name }} ({{ patient.gender }}), - {{ patient.city }} ({{ patient.country }})</p>
-             
+        {% if patient.male %}
+                
+           <p>{{ patient.first_name }} {{ patient.last_name}} (Male),{{ patient.age }} - {{ patient.city }} ({{ patient.country }})</p>
+       
+           {%else%}
+
+           <p>{{ patient.first_name }} {{ patient.last_name }} (Female),{{ patient.age }} - {{ patient.city }} ({{ patient.country }})</p>
+     
+           {% endif %}
         {% endfor %}
+        {% comment %} <input type="checkbox">Minors</input> {% endcomment %}
    
   </body>
 </html>
